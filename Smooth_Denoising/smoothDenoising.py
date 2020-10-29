@@ -255,7 +255,7 @@ def Gauss_Fileter(img, kernel_size, sigma):
     if sigma == 0:
         sigma = 6
     kernel = np.zeros([kernel_size, kernel_size])
-    kernel_center = kernel_size / 2  # 卷积核中心位置
+    kernel_center = (int)(kernel_size / 2)  # 卷积核中心位置
     sum_val = 0  # 记录卷积核中数字之和
     for i in range(0, kernel_size):
         for j in range(0, kernel_size):
